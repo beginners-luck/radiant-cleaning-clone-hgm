@@ -1,5 +1,15 @@
-$primaryFont: '';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit&display=swap');
+
+$primaryFont: 'Outfit', sans-serif;
+$secondaryFont: 'Bebas Neue', sans-serif; 
 $iconFont: 'icomoon';
+
+$green: #a1d884;
+$white: #fff;
+$black: #252525;
+$blue-dark: #082c8f;
+$blue-2: #244bb7;
+$blue: #009cde;
 
 @mixin transition($property: all, $duration: 0.4s, $easing: ease-in-out) {
   -webkit-transition: $property $duration $easing;

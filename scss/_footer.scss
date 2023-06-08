@@ -1,0 +1,42 @@
+footer {
+    text-align: center;
+
+    .footer-top-row {
+        color:white; 
+        background-color: $blue;
+        padding: 60px 0px; 
+
+        img {
+            width: 240px; 
+            margin-bottom: 48px;
+        }
+    }
+
+    .footer-bottom-row {
+        padding: 32px 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white;
+
+        div:first-child {
+            text-align: left;
+        }
+
+        /* Makes each column equal width */
+        div { 
+            flex: 1;
+        }
+
+        .c-and-c-watermark {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 14px;
+            }
+        }
+    }
+}
