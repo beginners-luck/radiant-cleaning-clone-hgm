@@ -1,0 +1,31 @@
+.nav-container {
+    height: 100px;
+    background-color: $white;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 60px; 
+
+    img {
+        height: 74px; 
+    }
+
+    a {
+        &:hover::before {
+            width: 0px;
+        }
+    }
+
+    nav {
+        color: $blue-dark; 
+
+        ul {
+           display: flex; 
+           gap: 48px; 
+
+            a.button {
+                padding: 12px 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.content {
+    p {
+    margin-bottom: 48px;
+    }
+}
+
+/** 
+ Background Colors 
+*/
+.blue-bkg-color {
+    background-color: $blue;
+}
+
+.blue-dark-bkg-color {
+    background-color: $blue-dark;
+}
+
+.blue-bkg-color, 
+.blue-dark-bkg-color {
+    h1, p {
+        color: $white; 
+
+        b {
+            color: $white; 
+        }
+    }
+
+    a {
+        &::before {
+            background-color: $white;
+        }
+    }
+}
+
+/**
+ Headings 1 to 6 
+*/
+h1, h2 {
+    color: $blue-dark; 
+    font-family: $secondaryFont;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 80px; 
+    line-height: 80px;
+
+    b {
+        color: $blue; 
+        font-weight: normal;
+    }
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 34px; 
+}
+
+h4 {
+    font-size: 16px; 
+    line-height: 16px;
+    text-transform: capitalize;
+    color: $blue; 
+}
+
+/**
+ Basic Inline Links (a tag)
+*/
+a {
+    position: relative;
+    color: inherit; 
+    cursor: pointer;
+    text-decoration: none;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        background-color: $black;
+        width: 0%;
+        height: 1px;
+        bottom: 0px; 
+        left: 0px; 
+        @include transition; 
+    }
+
+    &:hover::before {
+        width: 100%; 
+    }
+}
+
+/**
+ Button Links (a tag with button class)
+*/
+a.button, 
+a.blue {
+    color: $white;
+    background-color: $blue-dark;
+    
+    &:hover {
+        background-color: $blue-2;
+    }
+}
+
+a.button { 
+    padding: 12px 70px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 240px;
+
+    &:hover::before {
+        width: 0%;
+    }
+}
+
+
+/**
+ Icons (Icomoon)
+*/
+.icon-cacpro::before {
+    content: '\e904';
+    padding-left: 5px;
+}
