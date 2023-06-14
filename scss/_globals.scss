@@ -1,6 +1,17 @@
-.content {
+$bottom-paragraph-spacing: 48px; 
+
+
+.wp-content {
     p {
-    margin-bottom: 48px;
+    margin-bottom: $bottom-paragraph-spacing;
+    }
+
+    a.button {
+        margin-bottom: $bottom-paragraph-spacing;
+    }
+
+    > :last-child {
+        margin-bottom: 0px !important;
     }
 }
 
@@ -17,7 +28,7 @@
 
 .blue-bkg-color, 
 .blue-dark-bkg-color {
-    h1, p {
+    h1, h2, h3, p {
         color: $white; 
 
         b {
@@ -44,6 +55,7 @@ h1, h2 {
 h1 {
     font-size: 80px; 
     line-height: 80px;
+    margin-bottom: 24px;
 
     b {
         color: $blue; 
@@ -54,17 +66,19 @@ h1 {
 h2 {
     font-size: 30px;
     line-height: 40px;
+    margin-bottom: 12px;
 }
 
 h3 {
     font-size: 24px;
     line-height: 34px; 
+    margin-bottom: 12px;
 }
 
 h4 {
     font-size: 16px; 
     line-height: 16px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: $blue; 
 }
 
@@ -100,6 +114,7 @@ a.button,
 a.blue {
     color: $white;
     background-color: $blue-dark;
+    display: inline-block; 
     
     &:hover {
         background-color: $blue-2;
@@ -124,4 +139,23 @@ a.button {
 .icon-cacpro::before {
     content: '\e904';
     padding-left: 5px;
+}
+
+.icon-check::before {
+    content: '\e900';
+    padding-right: 12px;
+    font-size: 22px;
+    color: $green;
+}
+
+.icon-back-arrow::before {
+    content: '\e901';
+    font-size: 48px; 
+    color: $white; 
+} 
+
+.icon-forward-arrow::before {
+    content: '\e902'; 
+    font-size: 48px; 
+    color: $white; 
 }

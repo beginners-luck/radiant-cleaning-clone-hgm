@@ -1,4 +1,8 @@
 .nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;  
+    z-index: 10;
     height: 100px;
     background-color: $white;
     display: flex; 
@@ -20,12 +24,35 @@
         color: $blue-dark; 
 
         ul {
-           display: flex; 
-           gap: 48px; 
+            display: flex; 
+            @include align-center;  
+            gap: 48px; 
 
             a.button {
                 padding: 12px 24px;
+                min-width: 0px; 
             }
+        }
+    }
+}
+
+.home-hero-container {
+    min-height: 720px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $blue;
+    padding: 154px 120px; 
+    display: flex;
+    @include align-center; 
+
+    #home-hero-content-container {
+        width: 50%;
+
+        p {
+            font-size: 30px;
+            color: $blue-dark; 
+            line-height: 40px;
         }
     }
 }

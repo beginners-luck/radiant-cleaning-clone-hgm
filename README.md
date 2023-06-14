@@ -7,7 +7,7 @@ First completed wordpress "site." One page site that covers the basics. Uses bas
 
 ## Headings
 H1 - 80px Bebas, Neue
-H2 - 30px, Outfit-Regular (Hero)
+p - 30px, Outfit-Regular (Hero)
 H2 - 30px, Bebas Neue (everywhere else)
 H3 - 24px, Outfit-Bold
 H3 - 24px Outfit-Regular (Quote)
