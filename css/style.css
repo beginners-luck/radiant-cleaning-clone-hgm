@@ -254,6 +254,7 @@ img.aligncenter {
 }
 .wp-content a.button {
   margin-bottom: 48px;
+  margin-right: 24px;
 }
 .wp-content > :last-child {
   margin-bottom: 0px !important;
@@ -503,6 +504,13 @@ Service Areas Content
 #home-service-areas-container .service-areas-container .service-area {
   max-width: 190px;
 }
+#home-service-areas-container .service-areas-container .service-area img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 190px;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
 #home-service-areas-container .service-areas-container .service-area p {
   font-size: 24px;
   font-weight: bold;
@@ -514,7 +522,7 @@ Testimonial Content
 */
 #home-testimonial-container {
   position: relative;
-  height: 480px;
+  min-height: 480px;
   display: flex;
   -moz-align-items: center;
   align-items: center;
@@ -632,4 +640,14 @@ footer .footer-bottom-row a:hover {
 }
 footer .footer-bottom-row a:hover::before {
   width: 0%;
+}
+
+/**
+Breakpoints
+*/
+@media (max-width: 1320px) {
+  #home-features-container,
+  #home-hiring-cta-container {
+    border-radius: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

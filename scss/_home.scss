@@ -51,6 +51,12 @@ Service Areas Content
 
         .service-area {
             max-width: 190px;
+          
+            img {
+                object-fit: cover;
+                height: 190px;
+                object-position: 50% 50%;
+            }
 
             p {
                 font-size: 24px;
@@ -66,7 +72,7 @@ Testimonial Content
 */
 #home-testimonial-container {
     position: relative;
-    height: 480px;
+    min-height: 480px;
     display: flex; 
     @include align-center;  
 

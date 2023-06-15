@@ -8,6 +8,7 @@ $bottom-paragraph-spacing: 48px;
 
     a.button {
         margin-bottom: $bottom-paragraph-spacing;
+        margin-right: calc($bottom-paragraph-spacing / 2);
     }
 
     > :last-child {
