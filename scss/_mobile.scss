@@ -158,8 +158,16 @@
         width: 100%; 
     }
 
-    .service-areas-container {
-       
+    #home-service-areas-container {
+        .service-areas-container {
+            .service-area {
+                max-width: 14rem;
+
+                img {
+                    height: 14rem; 
+                }
+            }
+        }
     }
 
 }

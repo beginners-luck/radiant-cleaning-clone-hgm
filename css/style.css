@@ -49,7 +49,7 @@ body.nav-menu-open {
   *zoom: 1;
   width: 100%;
   max-width: 132rem;
-  min-width: 32rem;
+  min-width: 25rem;
 }
 
 .container-fluid {
@@ -59,7 +59,7 @@ body.nav-menu-open {
   *zoom: 1;
   width: 100%;
   max-width: 200rem;
-  min-width: 32rem;
+  min-width: 25rem;
 }
 
 .wrap {
@@ -767,5 +767,11 @@ footer .footer-bottom-row a:hover::before {
 @media (max-width: 450px) {
   a.button {
     width: 100%;
+  }
+  #home-service-areas-container .service-areas-container .service-area {
+    max-width: 14rem;
+  }
+  #home-service-areas-container .service-areas-container .service-area img {
+    height: 14rem;
   }
 }/*# sourceMappingURL=style.css.map */
