@@ -1,6 +1,6 @@
-$section-spacing: 100px; 
-$bottom-content-spacing: 60px; 
-$border-radius: 12px; 
+$section-spacing: 10rem; 
+$bottom-content-spacing: 6rem; 
+$border-radius: 1.2rem; 
 
 .content {
     > div {
@@ -13,12 +13,12 @@ Features Content
 */
 #home-features-container {
     background-color: $white;
-    padding: 60px; 
+    padding: 6rem; 
     display: flex;
-    gap: 94px; 
+    gap: 9.4rem; 
     border-radius: $border-radius $border-radius 0 0;
     border-bottom: 1px solid $light-gray;
-    margin-top: -60px;
+    margin-top: -6rem;
 
     .feature-header {
         display: flex;
@@ -27,7 +27,7 @@ Features Content
 
     .feature-content {
         // icon width + icon padding-right
-        padding-left: calc(22px + 12px); 
+        padding-left: calc(2.2rem + 1.2rem); 
     }
 }
 
@@ -44,24 +44,24 @@ Service Areas Content
     .service-areas-container {
         display: flex;
         flex-wrap: wrap; 
-        gap: 12px;  
+        gap: 1.2rem;  
         justify-content: center;
         margin-bottom: $bottom-content-spacing; 
         @include align-center; 
 
         .service-area {
-            max-width: 190px;
+            max-width: 19rem;
           
             img {
                 object-fit: cover;
-                height: 190px;
+                height: 19rem;
                 object-position: 50% 50%;
             }
 
             p {
-                font-size: 24px;
+                font-size: 2.4rem;
                 font-weight: bold;
-                line-height: 34px;
+                line-height: 3.4rem;
             }
         }
     }
@@ -72,8 +72,9 @@ Testimonial Content
 */
 #home-testimonial-container {
     position: relative;
-    min-height: 480px;
+    min-height: 48rem;
     display: flex; 
+    padding: 6rem 18rem 6rem 12rem;
     @include align-center;  
 
     h3 {
@@ -84,13 +85,12 @@ Testimonial Content
     .slider {
         z-index: 1; 
         display: flex;
-        gap: 180px; 
+        gap: 18rem; 
         @include align-center; 
-        padding: 0 180px 0 120px;
         
         .slider-progress-keys {
             display: flex;
-            gap: 24px; 
+            gap: 2.4rem; 
 
             button {
                 background-color: transparent;
@@ -139,7 +139,7 @@ Hiring Content
 
     .hiring-content {
         display: flex;
-        padding: 69px 90px; 
+        padding: 6rem 9rem; 
         @include align-center;
         
         .wp-content {
@@ -149,8 +149,8 @@ Hiring Content
         .gleam {
             position: absolute; 
             height: 50%;
-            bottom: 0px; 
-            right: 0px; 
+            bottom: 0; 
+            right: 0; 
         }
     }
 }

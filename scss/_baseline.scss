@@ -18,7 +18,7 @@ $light-gray: #dddddd;
 
 html {
 	scroll-behavior: smooth;
-	//font-size: 62.5%;  
+	font-size: 62.5%;  
 }
 
 @mixin transition($property: all, $duration: 0.4s, $easing: ease-in-out) {
@@ -81,7 +81,7 @@ body, html {
 
 body {
     color: #000000;
-	font:20px/30px $primaryFont;
+	font:2rem/3rem $primaryFont;
 	&.nav-menu-open{
 		position: fixed;
 		overflow: hidden;
@@ -95,7 +95,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	*zoom: 1;
-	max-width:720px;
+	max-width:72rem;
 	min-width: 0px;
 	width: 100%;
 	text-align: center;
@@ -107,8 +107,8 @@ body {
 	margin-right: auto;
 	*zoom: 1;
 	width: 100%;
-	max-width:1320px;
-	min-width: 320px;
+	max-width:132rem;
+	min-width: 32rem;
 }
 
 .container-fluid{
@@ -117,8 +117,8 @@ body {
 	margin-right: auto;
 	*zoom: 1;
 	width: 100%;
-	max-width:2000px;
-	min-width: 320px;			
+	max-width:200rem;
+	min-width: 32rem;			
 }
 
 

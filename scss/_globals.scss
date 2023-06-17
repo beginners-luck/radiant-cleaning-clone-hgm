@@ -1,4 +1,4 @@
-$bottom-paragraph-spacing: 48px; 
+$bottom-paragraph-spacing: 4.8rem; 
 
 
 .wp-content {
@@ -8,11 +8,12 @@ $bottom-paragraph-spacing: 48px;
 
     a.button {
         margin-bottom: $bottom-paragraph-spacing;
-        margin-right: calc($bottom-paragraph-spacing / 2);
+        margin-right: calc($bottom-paragraph-spacing / 4);
+        // margin-left: calc($bottom-paragraph-spacing / 4);
     }
 
     > :last-child {
-        margin-bottom: 0px !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -54,9 +55,9 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 80px; 
-    line-height: 80px;
-    margin-bottom: 24px;
+    font-size: 8rem; 
+    line-height: 8rem;
+    margin-bottom: 2.4rem;
 
     b {
         color: $blue; 
@@ -65,20 +66,20 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
-    line-height: 40px;
-    margin-bottom: 12px;
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1.2rem;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 34px; 
-    margin-bottom: 12px;
+    font-size: 2.4rem;
+    line-height: 3.4rem; 
+    margin-bottom: 1.2rem;
 }
 
 h4 {
-    font-size: 16px; 
-    line-height: 16px;
+    font-size: 1.6rem; 
+    line-height: 1.6rem;
     text-transform: uppercase;
     color: $blue; 
 }
@@ -98,8 +99,8 @@ a {
         background-color: $black;
         width: 0%;
         height: 1px;
-        bottom: 0px; 
-        left: 0px; 
+        bottom: 0; 
+        left: 0; 
         @include transition; 
     }
 
@@ -123,10 +124,10 @@ a.blue {
 }
 
 a.button { 
-    padding: 12px 70px;
+    padding: 1.2rem 7rem;
     border-radius: 4px;
     text-align: center;
-    min-width: 240px;
+    min-width: 24rem;
 
     &:hover::before {
         width: 0%;
@@ -145,18 +146,18 @@ a.button {
 .icon-check::before {
     content: '\e900';
     padding-right: 12px;
-    font-size: 22px;
+    font-size: 2.2rem;
     color: $green;
 }
 
 .icon-back-arrow::before {
     content: '\e901';
-    font-size: 48px; 
+    font-size: 4.8rem; 
     color: $white; 
 } 
 
 .icon-forward-arrow::before {
     content: '\e902'; 
-    font-size: 48px; 
+    font-size: 4.8rem; 
     color: $white; 
 }
