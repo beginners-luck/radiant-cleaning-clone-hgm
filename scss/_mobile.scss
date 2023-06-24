@@ -1,0 +1,174 @@
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 1320px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 1055px) {
+    #home-features-container,
+    #home-hiring-cta-container {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 925px) {
+    #home-features-container {
+        gap: 2.4rem;
+    }
+}
+
+@media (max-width: 825px) {
+    .footer-bottom-row {
+        flex-direction: column;
+    }
+}
+
+/**
+768 px tablet
+*/
+@media (max-width: 768px) {
+    /**
+    Globals Mobile Changes
+    */
+    h1 {
+        font-size: 4.2rem;
+        line-height: 4.2rem;
+    }
+
+    h2 {
+        font-size: 3rem; 
+        line-height: 4rem;
+    }
+
+    h3 {
+        font-size: 2rem; 
+        line-height: 3rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        line-height: 1.6rem; 
+    }
+
+    /**
+    Removing and Adding Global Padding
+    */
+    .nav-container,
+    #home-hero-container,
+    #home-features-container,
+    #home-service-areas-container,
+    #home-testimonial-container,
+    #home-satisfaction-container,
+    #home-hiring-cta-container .hiring-content,
+    #contact,
+    footer .footer-top-row,
+    footer .footer-bottom-row {
+        padding-left: 2.8rem;
+        padding-right: 2.8rem;
+    }
+
+
+    /**
+    Specific to page mobile styles
+    */
+    .nav-container {
+        nav {
+            li:last-child {
+                display: none;
+            }
+        }
+    }
+
+    #home-hero-container {
+        background-image: none !important;
+        background-color: $white;
+        padding-top: 6rem; 
+        padding-bottom: 6rem; 
+        min-height: 0;
+
+        .home-hero-content-container {
+            width: 100%;
+
+            p {
+                font-size: 2.2rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
+
+    header {
+        img {
+            &.hidden {
+                height: 38rem;
+                width: 100%;
+                object-fit: cover;
+                object-position: right 50%; 
+                display: block;
+            }
+        }
+    }
+
+    #home-features-container {
+        // padding: 4.8rem 2.8rem; 
+        flex-direction: column;
+
+        .feature {
+            margin: auto;
+        }
+    }
+
+    #home-service-areas-container {
+        .service-area {
+            p {
+                font-size: 2rem; 
+                line-height: 3rem;
+            }
+        }
+    }
+
+    #home-testimonial-container {
+        .gleam {
+            display: none;
+        }
+
+        .slider {
+            flex-direction: column;
+            gap: 8.6rem; 
+            align-items: normal;
+        }
+    }
+
+    #home-hiring-cta-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .gleam {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    a.button {
+        width: 100%; 
+    }
+
+    #home-service-areas-container {
+        .service-areas-container {
+            .service-area {
+                max-width: 14rem;
+
+                img {
+                    height: 14rem; 
+                }
+            }
+        }
+    }
+
+}
+

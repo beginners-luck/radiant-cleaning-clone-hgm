@@ -1,0 +1,60 @@
+.nav-container {
+    position: fixed;
+    width: 100%;
+    max-width: 200rem;
+    top: 0;  
+    z-index: 10;
+    height: 10rem;
+    background-color: $white;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 6rem; 
+
+    img {
+        height: 7.4rem; 
+    }
+
+    a {
+        &:hover::before {
+            width: 0;
+        }
+    }
+
+    nav {
+        color: $blue-dark; 
+
+        ul {
+            display: flex; 
+            @include align-center;  
+            gap: 4.8rem; 
+
+            a.button {
+                padding: 1.2rem 2.4rem;
+                min-width: 0; 
+            }
+        }
+    }
+}
+
+#home-hero-container {
+    margin-top: 10rem; 
+    min-height: 72rem; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $blue;
+    padding: 15.4rem 12rem; 
+    display: flex;
+    @include align-center; 
+
+    .home-hero-content-container {
+        width: 50%;
+
+        p {
+            font-size: 3rem;
+            color: $blue-dark; 
+            line-height: 4rem;
+        }
+    }
+}

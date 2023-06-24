@@ -1,0 +1,160 @@
+$section-spacing: 10rem; 
+$bottom-content-spacing: 6rem; 
+$border-radius: 1.2rem; 
+
+.content {
+    > div {
+        margin-bottom: $section-spacing;
+    }
+}
+
+/**
+Features Content
+*/
+#home-features-container {
+    background-color: $white;
+    padding: 6rem; 
+    display: flex;
+    gap: 9.4rem; 
+    border-radius: $border-radius $border-radius 0 0;
+    border-bottom: 1px solid $light-gray;
+    margin-top: -6rem;
+
+    .feature-header {
+        display: flex;
+        @include align-center; 
+    }
+
+    .feature-content {
+        // icon width + icon padding-right
+        padding-left: calc(2.2rem + 1.2rem); 
+    }
+}
+
+/**
+Service Areas Content
+*/
+#home-service-areas-container {
+    text-align: center;
+
+    .wp-content {
+        margin-bottom: $bottom-paragraph-spacing; 
+    }
+
+    .service-areas-container {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 1.2rem;  
+        justify-content: center;
+        margin-bottom: $bottom-content-spacing; 
+        @include align-center; 
+
+        .service-area {
+            max-width: 19rem;
+          
+            img {
+                object-fit: cover;
+                height: 19rem;
+                object-position: 50% 50%;
+            }
+
+            p {
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 3.4rem;
+            }
+        }
+    }
+}
+
+/**
+Testimonial Content
+*/
+#home-testimonial-container {
+    position: relative;
+    min-height: 48rem;
+    display: flex; 
+    padding: 6rem 18rem 6rem 12rem;
+    @include align-center;  
+
+    h3 {
+        margin-bottom: $bottom-paragraph-spacing;
+        font-weight: normal;
+    }
+
+    .slider {
+        z-index: 1; 
+        display: flex;
+        gap: 18rem; 
+        @include align-center; 
+        
+        .slider-progress-keys {
+            display: flex;
+            gap: 2.4rem; 
+
+            button {
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .gleam {
+        position: absolute;
+        right: 0; 
+        height: 100%;
+    }
+}
+
+/**
+Satisfaction Content
+*/
+#home-satisfaction-container {
+    text-align: center;
+}
+
+/**
+Hiring Content
+*/
+#home-hiring-cta-container {
+    border-radius: $border-radius;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+
+    /* Makes each column equal width */
+    div { 
+        flex: 1;
+    }
+
+    .hiring-image-container {
+        img {
+            display: block;
+            object-fit: cover;
+            object-position: 50% 50%;
+            max-height: 100%; 
+            min-height: 100%; 
+        }
+    }
+
+    .hiring-content {
+        display: flex;
+        padding: 6rem 9rem; 
+        @include align-center;
+        
+        .wp-content {
+            z-index: 1; 
+        }
+
+        .gleam {
+            position: absolute; 
+            height: 50%;
+            bottom: 0; 
+            right: 0; 
+        }
+    }
+}
+
+#contact {
+    text-align: center;
+}
