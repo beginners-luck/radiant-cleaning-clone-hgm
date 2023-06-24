@@ -1,9 +1,17 @@
-$bottom-paragraph-spacing: 4.8rem; 
+$bottom-paragraph-spacing: 4.8rem;
+$section-spacing: 10rem; 
+$bottom-content-spacing: 6rem; 
+$border-radius: 1.2rem;  
 
+#content {
+    > div {
+        margin-bottom: $section-spacing;
+    }
+}
 
 .wp-content {
-    p {
-    margin-bottom: $bottom-paragraph-spacing;
+    p, ol, ul, hr, blockquote {
+        margin-bottom: $bottom-paragraph-spacing;
     }
 
     a.button {
@@ -16,6 +24,21 @@ $bottom-paragraph-spacing: 4.8rem;
         margin-bottom: 0 !important;
     }
 }
+
+.default-header {
+    padding: 10rem 12rem;
+    margin-top: 10rem;
+    margin-bottom: $section-spacing;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+ol, ul {
+    margin: 0; 
+}
+
 
 /** 
  Background Colors 
@@ -41,6 +64,10 @@ $bottom-paragraph-spacing: 4.8rem;
     a {
         &::before {
             background-color: $white;
+        }
+
+        &:focus {
+            color: $white;  
         }
     }
 }
@@ -72,6 +99,7 @@ h2 {
 }
 
 h3 {
+    color: $blue-dark; 
     font-size: 2.4rem;
     line-height: 3.4rem; 
     margin-bottom: 1.2rem;
@@ -80,7 +108,9 @@ h3 {
 h4 {
     font-size: 1.6rem; 
     line-height: 1.6rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    font-weight: bold;
     color: $blue; 
 }
 
@@ -97,23 +127,35 @@ a {
         content: " ";
         position: absolute;
         background-color: $black;
-        width: 0%;
-        height: 1px;
+        width: 0;
+        height: 2px;
         bottom: 0; 
         left: 0; 
         @include transition; 
     }
 
-    &:hover::before {
-        width: 100%; 
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+
+        &::before {
+            width: 100%; 
+        } 
+
+    }
+
+    &:focus {
+        text-decoration: none;
+        color: $black;  
     }
 }
 
 /**
  Button Links (a tag with button class)
 */
-a.button, 
-a.blue {
+a.button.blue,
+input[type=submit], 
+.menu-item.button.blue a {
     color: $white;
     background-color: $blue-dark;
     display: inline-block; 
@@ -123,7 +165,9 @@ a.blue {
     }
 }
 
-a.button { 
+a.button,
+input[type=submit],
+.menu-item.button.blue a { 
     padding: 1.2rem 7rem;
     border-radius: 4px;
     text-align: center;

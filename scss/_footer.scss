@@ -43,5 +43,16 @@ footer {
                 width: 0%; 
             }
         }
+
+        .menu {
+            list-style-type: none;
+            padding: 0; 
+            display: flex;
+            gap: 3rem; 
+            
+            &#menu-footer-menu {
+                justify-content: center;
+            }
+        }
     }
 }

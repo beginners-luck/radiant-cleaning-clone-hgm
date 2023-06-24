@@ -1,4 +1,4 @@
-.hidden {
+.hidden-mobile {
     display: none;
 }
 
@@ -56,16 +56,18 @@
     }
 
     /**
-    Removing and Adding Global Padding
+    Removing and Adding Global Padding (this will be better next time lol)
     */
     .nav-container,
     #home-hero-container,
+    .default-header,
     #home-features-container,
     #home-service-areas-container,
     #home-testimonial-container,
     #home-satisfaction-container,
     #home-hiring-cta-container .hiring-content,
     #contact,
+    .page .container,
     footer .footer-top-row,
     footer .footer-bottom-row {
         padding-left: 2.8rem;
@@ -103,7 +105,7 @@
 
     header {
         img {
-            &.hidden {
+            &.hidden-mobile {
                 height: 38rem;
                 width: 100%;
                 object-fit: cover;
@@ -132,14 +134,32 @@
     }
 
     #home-testimonial-container {
+        min-height: 0;
+        
         .gleam {
             display: none;
         }
 
-        .slider {
-            flex-direction: column;
-            gap: 8.6rem; 
-            align-items: normal;
+        .swiper {
+            padding-bottom: 9.6rem; 
+
+            .swiper-slide {
+                .wp-content {
+                    margin-right: 0; 
+                }
+            }
+            
+            .icon-back-arrow {
+                transform: translateY(0%); 
+                bottom: 0; 
+                left: 0; 
+            }
+
+            .icon-forward-arrow {
+                transform: translateY(0%); 
+                bottom: 0; 
+                left: 4.8rem + 2.4rem; 
+            }
         }
     }
 

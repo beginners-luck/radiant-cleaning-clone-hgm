@@ -1,0 +1,38 @@
+// How to use the popup plugin: https://www.wonderplugin.com/wordpress-lightbox/
+
+#html5box-html5-lightbox {
+    #html5-lightbox-box,
+    .html5-elem-wrap {
+        max-width: 72rem !important;
+    }
+    
+    .html5lightbox-div {
+        padding: 4.8rem 3.6rem;
+    
+        .wp-content {
+            text-align: left;
+
+            textarea {
+                height: 100px; 
+            }
+        }
+    }
+    
+    #html5-close {
+        margin: 2rem 2rem 0 0 !important;
+        
+        &::before {
+            content: "\e906";
+            font-family: $iconFont;
+            color: $blue-dark; 
+            font-size: 2rem;
+            background-color: $white;
+            position: absolute; 
+            right: 50%; 
+            top: 50%; 
+            transform: translate(50%, -50%);
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
