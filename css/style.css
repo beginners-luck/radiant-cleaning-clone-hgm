@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -21,7 +22,7 @@ body, html {
 }
 
 body {
-  color: #000000;
+  color: #252525;
   font: 2rem/3rem "Outfit", sans-serif;
 }
 body.nav-menu-open {
@@ -91,7 +92,7 @@ body.nav-menu-open {
 
 ::selection {
   color: white;
-  background: #d6d3ab;
+  background: #a1d884;
 }
 
 :focus {
@@ -250,7 +251,11 @@ img.aligncenter {
     opacity: 1;
   }
 }
-.wp-content p {
+#content > div {
+  margin-bottom: 10rem;
+}
+
+.wp-content p, .wp-content ol, .wp-content ul, .wp-content hr, .wp-content blockquote {
   margin-bottom: 4.8rem;
 }
 .wp-content a.button {
@@ -259,6 +264,19 @@ img.aligncenter {
 }
 .wp-content > :last-child {
   margin-bottom: 0 !important;
+}
+
+.default-header {
+  padding: 10rem 12rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.default-header h1 {
+  margin-bottom: 0;
+}
+
+ol, ul {
+  margin: 0;
 }
 
 /** 
@@ -290,6 +308,10 @@ img.aligncenter {
 .blue-dark-bkg-color a::before {
   background-color: #fff;
 }
+.blue-bkg-color a:focus,
+.blue-dark-bkg-color a:focus {
+  color: #fff;
+}
 
 /**
  Headings 1 to 6 
@@ -317,6 +339,7 @@ h2 {
 }
 
 h3 {
+  color: #082c8f;
   font-size: 2.4rem;
   line-height: 3.4rem;
   margin-bottom: 1.2rem;
@@ -325,7 +348,9 @@ h3 {
 h4 {
   font-size: 1.6rem;
   line-height: 1.6rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  font-weight: bold;
   color: #009cde;
 }
 
@@ -342,37 +367,51 @@ a::before {
   content: " ";
   position: absolute;
   background-color: #252525;
-  width: 0%;
-  height: 1px;
+  width: 0;
+  height: 2px;
   bottom: 0;
   left: 0;
   transition: all 0.4s ease-in-out;
 }
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 a:hover::before {
   width: 100%;
+}
+a:focus {
+  text-decoration: none;
+  color: #252525;
 }
 
 /**
  Button Links (a tag with button class)
 */
-a.button,
-a.blue {
+a.button.blue,
+input[type=submit],
+.menu-item.button.blue a {
   color: #fff;
   background-color: #082c8f;
   display: inline-block;
 }
-a.button:hover,
-a.blue:hover {
+a.button.blue:hover,
+input[type=submit]:hover,
+.menu-item.button.blue a:hover {
   background-color: #244bb7;
 }
 
-a.button {
+a.button,
+input[type=submit],
+.menu-item.button.blue a {
   padding: 1.2rem 7rem;
   border-radius: 4px;
   text-align: center;
   min-width: 24rem;
 }
-a.button:hover::before {
+a.button:hover::before,
+input[type=submit]:hover::before,
+.menu-item.button.blue a:hover::before {
   width: 0%;
 }
 
@@ -403,6 +442,432 @@ a.button:hover::before {
   color: #fff;
 }
 
+/**
+Gravity Forms CSS Targeting Examples: https://docs.gravityforms.com/css-targeting-examples/
+Styling Radio Buttons: https://bryntum.com/blog/3-ways-to-style-radio-buttons-with-modern-css/
+Styling Number Fields: https://laracasts.com/discuss/channels/laravel/customize-increment-arrows-on-input-of-type-number-using-css
+*/
+body .gform_confirmation_message {
+  color: #082c8f;
+}
+body .gform_wrapper {
+  text-align: left;
+}
+body .gform_wrapper .gform_required_legend {
+  display: none;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield {
+  /** 
+  Field Styles
+  */
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex label {
+  color: #cccccc;
+  font: normal 1.5rem/1 "Outfit", sans-serif;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_description {
+  color: #cccccc;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label {
+  font: bold 1.8rem/1 "Outfit", sans-serif;
+  color: #082c8f;
+  border-bottom: 0;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required {
+  color: #082c8f;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=text],
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=email],
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=tel],
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=number],
+body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+  font: normal 1.8rem/1 "Outfit", sans-serif !important;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 1.6rem 2.4rem;
+  line-height: 1;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield input::-moz-placeholder, body .gform_wrapper .gform_body .gform_fields .gfield textarea::-moz-placeholder {
+  color: #cccccc;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield input::placeholder,
+body .gform_wrapper .gform_body .gform_fields .gfield textarea::placeholder {
+  color: #cccccc;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio label,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox label {
+  font: normal 1.8rem/1 "Outfit", sans-serif;
+  line-height: 1.5;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio .gchoice,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox .gchoice {
+  position: relative;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=radio],
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 2.5rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=radio]::before,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  left: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=radio]::after,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=radio]::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  opacity: 0;
+  background-color: #009cde;
+  left: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=radio]:checked::after,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=radio]:checked::after {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=checkbox],
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 2.5rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=checkbox]::before,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  left: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=checkbox]::after,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=checkbox]::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  opacity: 0;
+  background-color: #009cde;
+  left: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type=checkbox]:checked::after,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type=checkbox]:checked::after {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+body .gform_wrapper .gform_footer {
+  padding: 16px 0 0 0 !important;
+}
+body .gform_wrapper .gform_footer input[type=submit] {
+  border: none;
+  margin: 0;
+}
+body .gform_wrapper.gravity-theme .gform_validation_errors {
+  border: none;
+  border-top: 2px solid #c02b0a;
+  border-bottom: 2px solid #c02b0a;
+  border-radius: 0px;
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 6rem;
+}
+body .gform_wrapper.gravity-theme .gform_validation_errors h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+body .gform_wrapper [aria-invalid=true] {
+  border: 1px solid #c02b0a !important;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message {
+  color: #c02b0a;
+  border: none;
+  background-color: transparent;
+  margin: 0px;
+  padding-left: 0;
+}
+
+/*!
+ *         ,/
+ *       ,'/
+ *     ,' /
+ *   ,'  /_____,
+ * .'____    ,'
+ *      /  ,'
+ *     / ,'
+ *    /,'
+ *   /'
+ *
+ * Selectric ϟ v1.13.0 (Aug 22 2017) - http://lcdsantos.github.io/jQuery-Selectric/
+ *
+ * Copyright (c) 2017 Leonardo Santos; MIT License
+ * 
+ * Custom styles added.
+ * Selectric Styles: https://selectric.js.org/demo.html
+ */
+.selectric-wrapper {
+  position: relative;
+  cursor: pointer;
+  /* Items box */
+}
+.selectric-wrapper .selectric {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 5.8rem;
+  padding: 1.8rem 2.4rem;
+}
+.selectric-wrapper .selectric .label {
+  text-align: left;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 3.8rem 0 0;
+  padding: 0;
+  font: normal 1.8rem/1 "Outfit", sans-serif;
+  color: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.selectric-wrapper .selectric .button {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 38px;
+  height: 100%;
+  line-height: 38px;
+  background-color: #fff;
+  color: inherit;
+  text-align: center;
+  font: 0/0 a;
+  *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+}
+.selectric-wrapper .selectric .button::after {
+  content: "\e905";
+  font-family: "icomoon";
+  rotate: -90deg;
+  position: absolute;
+  color: #009cde;
+  font-size: 1rem;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+.selectric-wrapper .selectric-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  z-index: -1;
+  box-shadow: 0 0 10px -6px;
+}
+.selectric-wrapper .selectric-items .selectric-scroll {
+  height: 100%;
+  overflow: auto;
+}
+.selectric-wrapper .selectric-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+  min-height: 20px;
+}
+.selectric-wrapper .selectric-items ul li {
+  display: block;
+  font: normal 1.8rem/1 "Outfit", sans-serif;
+  padding: 1.8rem 2.4rem;
+  color: inherit;
+  cursor: pointer;
+}
+.selectric-wrapper .selectric-items ul li.selected {
+  background: blue;
+}
+.selectric-wrapper .selectric-items ul li.highlighted {
+  background: #009cde;
+}
+.selectric-wrapper .selectric-items ul li:hover {
+  background: #009cde;
+}
+.selectric-wrapper .selectric-items .disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default !important;
+  background: none !important;
+  color: #666 !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.selectric-wrapper .selectric-items .selectric-group .selectric-group-label {
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background: none;
+  color: #252525;
+}
+.selectric-wrapper .selectric-items .selectric-group.disabled li {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.selectric-wrapper .selectric-items .selectric-group li {
+  padding-left: 25px;
+}
+.selectric-wrapper .selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important;
+}
+
+.selectric-above .selectric-items {
+  top: auto;
+  bottom: 100%;
+}
+
+.selectric-responsive {
+  width: 100%;
+}
+
+.selectric-focus .selectric {
+  border: 1px solid #cccccc;
+}
+
+.selectric-hover .selectric .button:after {
+  color: #244bb7;
+}
+
+.selectric-open {
+  z-index: 9999;
+}
+.selectric-open .selectric {
+  border: 1px solid #cccccc;
+}
+.selectric-open .selectric-items {
+  display: block;
+}
+
+.selectric-disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+.selectric-hide-select select {
+  position: absolute;
+  left: -100%;
+}
+.selectric-hide-select.selectric-is-native {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.selectric-hide-select.selectric-is-native select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  z-index: 1;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important;
+}
+
+#html5box-html5-lightbox #html5-lightbox-box,
+#html5box-html5-lightbox .html5-elem-wrap {
+  max-width: 72rem !important;
+}
+#html5box-html5-lightbox .html5lightbox-div {
+  padding: 4.8rem 3.6rem;
+}
+#html5box-html5-lightbox .html5lightbox-div .wp-content {
+  text-align: left;
+}
+#html5box-html5-lightbox .html5lightbox-div .wp-content textarea {
+  height: 100px;
+}
+#html5box-html5-lightbox #html5-close {
+  margin: 2rem 2rem 0 0 !important;
+}
+#html5box-html5-lightbox #html5-close::before {
+  content: "\e906";
+  font-family: "icomoon";
+  color: #082c8f;
+  font-size: 2rem;
+  background-color: #fff;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 4rem;
+  height: 4rem;
+}
+
 .nav-container {
   position: fixed;
   width: 100%;
@@ -416,11 +881,14 @@ a.button:hover::before {
   justify-content: space-between;
   padding: 1.3rem 6rem;
 }
-.nav-container img {
+.nav-container .nav-logo-link img {
   height: 7.4rem;
 }
-.nav-container a:hover::before {
-  width: 0;
+.nav-container .nav-logo-link:hover::before {
+  width: 0%;
+}
+.nav-container a::before {
+  background-color: #082c8f;
 }
 .nav-container nav {
   color: #082c8f;
@@ -432,7 +900,7 @@ a.button:hover::before {
   align-content: center;
   gap: 4.8rem;
 }
-.nav-container nav ul a.button {
+.nav-container nav ul .menu-item.button a {
   padding: 1.2rem 2.4rem;
   min-width: 0;
 }
@@ -459,13 +927,17 @@ a.button:hover::before {
   line-height: 4rem;
 }
 
-.content > div {
-  margin-bottom: 10rem;
+.page .container {
+  text-align: left;
 }
 
 /**
 Features Content
 */
+.home .container {
+  text-align: center;
+}
+
 #home-features-container {
   background-color: #fff;
   padding: 6rem;
@@ -506,6 +978,7 @@ Service Areas Content
 }
 #home-service-areas-container .service-areas-container .service-area {
   max-width: 19rem;
+  word-spacing: 5rem;
 }
 #home-service-areas-container .service-areas-container .service-area img {
   -o-object-fit: cover;
@@ -513,6 +986,7 @@ Service Areas Content
   height: 19rem;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+  margin-bottom: 1.2rem;
 }
 #home-service-areas-container .service-areas-container .service-area p {
   font-size: 2.4rem;
@@ -522,6 +996,7 @@ Service Areas Content
 
 /**
 Testimonial Content
+Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-good-practice/
 */
 #home-testimonial-container {
   position: relative;
@@ -536,21 +1011,27 @@ Testimonial Content
   margin-bottom: 4.8rem;
   font-weight: normal;
 }
-#home-testimonial-container .slider {
-  z-index: 1;
-  display: flex;
-  gap: 18rem;
-  -moz-align-items: center;
-  align-items: center;
-  align-content: center;
+#home-testimonial-container .swiper {
+  width: 100%;
 }
-#home-testimonial-container .slider .slider-progress-keys {
-  display: flex;
-  gap: 2.4rem;
+#home-testimonial-container .swiper .swiper-slide .wp-content {
+  margin-right: 27rem;
 }
-#home-testimonial-container .slider .slider-progress-keys button {
-  background-color: transparent;
-  border: none;
+#home-testimonial-container .swiper .icon-back-arrow {
+  position: absolute;
+  bottom: 50%;
+  right: 7.2rem;
+  transform: translateY(50%);
+  z-index: 10;
+  cursor: pointer;
+}
+#home-testimonial-container .swiper .icon-forward-arrow {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  transform: translateY(50%);
+  z-index: 10;
+  cursor: pointer;
 }
 #home-testimonial-container .gleam {
   position: absolute;
@@ -644,8 +1125,17 @@ footer .footer-bottom-row a:hover {
 footer .footer-bottom-row a:hover::before {
   width: 0%;
 }
+footer .footer-bottom-row .menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 3rem;
+}
+footer .footer-bottom-row .menu#menu-footer-menu {
+  justify-content: center;
+}
 
-.hidden {
+.hidden-mobile {
   display: none;
 }
 
@@ -694,16 +1184,18 @@ footer .footer-bottom-row a:hover::before {
     line-height: 1.6rem;
   }
   /**
-  Removing and Adding Global Padding
+  Removing and Adding Global Padding (this will be better next time lol)
   */
   .nav-container,
   #home-hero-container,
+  .default-header,
   #home-features-container,
   #home-service-areas-container,
   #home-testimonial-container,
   #home-satisfaction-container,
   #home-hiring-cta-container .hiring-content,
   #contact,
+  .page .container,
   footer .footer-top-row,
   footer .footer-bottom-row {
     padding-left: 2.8rem;
@@ -729,7 +1221,7 @@ footer .footer-bottom-row a:hover::before {
     font-size: 2.2rem;
     line-height: 2.2rem;
   }
-  header img.hidden {
+  header img.hidden-mobile {
     height: 38rem;
     width: 100%;
     -o-object-fit: cover;
@@ -748,13 +1240,27 @@ footer .footer-bottom-row a:hover::before {
     font-size: 2rem;
     line-height: 3rem;
   }
+  #home-testimonial-container {
+    min-height: 0;
+  }
   #home-testimonial-container .gleam {
     display: none;
   }
-  #home-testimonial-container .slider {
-    flex-direction: column;
-    gap: 8.6rem;
-    align-items: normal;
+  #home-testimonial-container .swiper {
+    padding-bottom: 9.6rem;
+  }
+  #home-testimonial-container .swiper .swiper-slide .wp-content {
+    margin-right: 0;
+  }
+  #home-testimonial-container .swiper .icon-back-arrow {
+    transform: translateY(0%);
+    bottom: 0;
+    left: 0;
+  }
+  #home-testimonial-container .swiper .icon-forward-arrow {
+    transform: translateY(0%);
+    bottom: 0;
+    left: 7.2rem;
   }
   #home-hiring-cta-container {
     grid-template-columns: 1fr;

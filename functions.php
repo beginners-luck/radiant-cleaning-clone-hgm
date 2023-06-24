@@ -10,20 +10,25 @@ function add_scripts()
 	{
 		wp_deregister_script( 'jquery' );		
 		wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' ), false, null, true );
-		wp_enqueue_script( 'jquery' );	
-		
+		wp_enqueue_script( 'jquery' );
+		wp_register_script( 'swiper', ( 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js' ), false, null, true );
+		wp_enqueue_script( 'swiper' );
+        
 		wp_enqueue_script('bootstrap', get_bloginfo('stylesheet_directory').'/js/bootstrap.min.js', '', '3.3.2', true);
 		wp_enqueue_script('fastclick', get_bloginfo('stylesheet_directory').'/js/fastclick.js', '', '1.0', true);
+        wp_enqueue_script('selectric', get_bloginfo('stylesheet_directory').'/js/jquery.selectric.js', '1.13.0', true);
 		wp_enqueue_script('smoothScroll', get_bloginfo('stylesheet_directory').'/js/smoothScroll.min.js', '', '1.4.4', true);
 		wp_enqueue_script('css3-animate-it', get_bloginfo('stylesheet_directory').'/js/css3-animate-it.js', '', '1.0.0', true);		
 		wp_enqueue_script('jquery-animsition', get_bloginfo('stylesheet_directory').'/js/animsition.min.js', '', '1.0.0', true);
 		wp_enqueue_script('lazy-load', get_bloginfo('stylesheet_directory').'/js/lazyload.min.js', '', '10.19.0', true);
 		wp_enqueue_script('jquery-custom', get_bloginfo('stylesheet_directory').'/js/jquery.site.js', '', '1.0', true);	
 		
+        // wp_register_style('swiper-style', ('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'));
 		wp_enqueue_style('reset-style', get_bloginfo('stylesheet_directory').'/css/reset.css');	
 		wp_enqueue_style('animsition-style', get_bloginfo('stylesheet_directory').'/css/animsition.min.css');
 		wp_enqueue_style('css3-animate-it-style', get_bloginfo('stylesheet_directory').'/css/animations.css');
 		wp_enqueue_style('bootstrap-style', get_bloginfo('stylesheet_directory').'/css/bootstrap.min.css');
+        wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', 'all'); 
 		wp_enqueue_style('site-style', get_bloginfo('stylesheet_directory').'/css/style.css');			
 	}
 }
@@ -44,7 +49,8 @@ if ( function_exists( 'register_nav_menus' ) )
 {
   	register_nav_menus(
   		array(
-  		  'main_menu' => 'Main Menu'
+  		  'main_menu' => 'Main Menu',
+          'footer_menu' => 'Footer Menu'
   		)
   	); 	
 }
@@ -110,26 +116,29 @@ add_action('admin_init', 'custom_imagelink_setup', 10);
 function custom_login_logo() { ?>
     <style type="text/css">    		    
         body.login div#login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/site-login-logo.svg);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
             padding-bottom: 30px;
             width: 280px;
             background-size: contain;
         }
+
+        body.login {
+            background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url(<?php echo get_stylesheet_directory_uri(); ?>/images/login-background-img.png); 
+            background-size: cover;  
+            background-position: center; 
+        }
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'custom_login_logo' );
+
 
 function custom_login_logo_url() {
     return get_bloginfo('url');
 }
 add_filter( 'login_headerurl', 'custom_login_logo_url' );
 
-// pull in helpers
-require_once('include/helper.php');	
+
+
 // pull in shortcodes
 require_once('include/shortcodes.php');	
-// pull in ajax calls
-require_once('include/ajaxcalls.php');	
-// pull in ajax calls
-require_once('include/cpt.php');
 ?>

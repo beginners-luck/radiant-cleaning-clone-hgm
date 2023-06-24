@@ -31,12 +31,24 @@
 
 <link rel="index" title="<?php bloginfo( 'name' ); ?>" href="<?php echo get_option('home'); ?>/" />
 <?php wp_head(); ?>
+
+<!-- Icomoon Font Import -->
+<link rel="stylesheet" href="https://i.icomoon.io/public/b92762f88c/RadiantCommercialCleaning/style.css">
 </head>
-<body id="preload" <?php body_class(); ?>>
+<body id="preload" <?php body_class(); ?> class="animsition">
 
 <div class="wrap">
 
 <!-- begin header -->
-<header>
-	<!-- Add navigation menu, etc. -->
-</header>
+<header class="container-fluid">
+	<div class="nav-container">
+		<a class="nav-logo-link" href="<?php echo get_home_url(); ?>"><img class="site-nav-logo" src="<?php echo get_template_directory_uri() ?>/images/logo.png"></a>
+		<nav>
+			<?php wp_nav_menu( array( 'theme_location' => 'main_menu' )); ?>
+			<!-- <ul>
+				<li><a>(717) 552-6781</a></li>
+				<li><a class="button blue" href="#contact">Contact Us</a></li>
+			</ul> -->
+		</nav>
+	</div>
+	<!-- Header continued in header template files. -->
