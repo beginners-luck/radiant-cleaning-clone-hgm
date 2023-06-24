@@ -11,13 +11,20 @@
     justify-content: space-between;
     padding: 1.3rem 6rem; 
 
-    img {
-        height: 7.4rem; 
+    .nav-logo-link {
+        img {
+            height: 7.4rem; 
+        }
+
+        &:hover::before {
+            width: 0%; 
+        }
+
     }
 
     a {
-        &:hover::before {
-            width: 0;
+        &::before {
+            background-color: $blue-dark;
         }
     }
 
@@ -29,7 +36,7 @@
             @include align-center;  
             gap: 4.8rem; 
 
-            a.button {
+            .menu-item.button a {
                 padding: 1.2rem 2.4rem;
                 min-width: 0; 
             }

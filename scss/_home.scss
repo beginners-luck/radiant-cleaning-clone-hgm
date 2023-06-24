@@ -1,16 +1,12 @@
-$section-spacing: 10rem; 
-$bottom-content-spacing: 6rem; 
-$border-radius: 1.2rem; 
-
-.content {
-    > div {
-        margin-bottom: $section-spacing;
-    }
-}
-
 /**
 Features Content
 */
+.home {
+    .container {
+        text-align: center;
+    }
+}
+
 #home-features-container {
     background-color: $white;
     padding: 6rem; 
@@ -51,11 +47,13 @@ Service Areas Content
 
         .service-area {
             max-width: 19rem;
+            word-spacing: 5rem;
           
             img {
                 object-fit: cover;
                 height: 19rem;
                 object-position: 50% 50%;
+                margin-bottom: 1.2rem;
             }
 
             p {
@@ -69,6 +67,7 @@ Service Areas Content
 
 /**
 Testimonial Content
+Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-good-practice/
 */
 #home-testimonial-container {
     position: relative;
@@ -82,20 +81,32 @@ Testimonial Content
         font-weight: normal;
     }
 
-    .slider {
-        z-index: 1; 
-        display: flex;
-        gap: 18rem; 
-        @include align-center; 
-        
-        .slider-progress-keys {
-            display: flex;
-            gap: 2.4rem; 
+    
+    .swiper {
+        width: 100%;
 
-            button {
-                background-color: transparent;
-                border: none;
+        .swiper-slide {
+            .wp-content {
+                margin-right: 27rem; 
             }
+        }
+
+        .icon-back-arrow {
+            position: absolute;
+            bottom: 50%; 
+            right: 4.8rem + 2.4rem; 
+            transform: translateY(50%);
+            z-index: 10;
+            cursor: pointer; 
+        }
+
+        .icon-forward-arrow {
+            position: absolute;
+            bottom: 50%; 
+            right: 0; 
+            transform: translateY(50%);
+            z-index: 10;
+            cursor: pointer; 
         }
     }
 
