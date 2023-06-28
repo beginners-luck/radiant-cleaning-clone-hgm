@@ -1,11 +1,13 @@
 <?php
 /**
- * @
- * @ - Header
- * @version:		1.0
+ * Header format for each page. 
+ * 
+ * Includes just the navigation. Header type specified in hero-header 
+ * and default-header files.
  *
  * @author: 		John Starr
  * @website:		cacpro.com
+ * @author: 		Hannah Moats
  *
 */
 ?>
@@ -45,10 +47,6 @@
 		<a class="nav-logo-link" href="<?php echo get_home_url(); ?>"><img class="site-nav-logo" src="<?php echo get_template_directory_uri() ?>/images/logo.png"></a>
 		<nav>
 			<?php wp_nav_menu( array( 'theme_location' => 'main_menu' )); ?>
-			<!-- <ul>
-				<li><a>(717) 552-6781</a></li>
-				<li><a class="button blue" href="#contact">Contact Us</a></li>
-			</ul> -->
 		</nav>
 	</div>
-	<!-- Header continued in header template files. -->
+	<!-- Header continued in default-header.php or here-header.php -->

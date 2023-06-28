@@ -1,4 +1,10 @@
 <?php 
+/**
+ * 404 error page format.
+ *
+ * @author: 	John Starr
+ * @author:		Hannah Moats
+ */
 get_header(); 
 get_template_part('template-parts/default-header');
 ?>

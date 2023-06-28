@@ -1,14 +1,11 @@
 <?php
 /**
- * @
- * @ - Front Page
- * @version:		1.0
+ * Front Page
+ * @version:	1.0
  *
- * @author: 		John Starr
- * 
- * https://swiperjs.com/ for testimonial slider thing.
- *
-*/
+ * @author: 	John Starr
+ * @author:		Hannah Moats
+ */
 
 get_header(); 
 get_template_part('template-parts/hero-header'); 

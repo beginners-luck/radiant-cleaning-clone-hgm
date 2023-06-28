@@ -1,14 +1,24 @@
+//** Styles for media queries
+//## 1320px Screen
+//## 1055px Screen
+//## 925px Screen
+//## 825px Screen 
+//## 768px Screen
+//## 450px Screen
+
+
 .hidden-mobile {
     display: none;
 }
 
-
+// 1320px Screen
 @media (max-width: 1320px) {
     html {
         font-size: 50%;
     }
 }
 
+// 1055px Screen
 @media (max-width: 1055px) {
     #home-features-container,
     #home-hiring-cta-container {
@@ -16,25 +26,24 @@
     }
 }
 
+// 925px Screen 
 @media (max-width: 925px) {
     #home-features-container {
         gap: 2.4rem;
     }
 }
 
+// 825px Screen 
 @media (max-width: 825px) {
     .footer-bottom-row {
         flex-direction: column;
     }
 }
 
-/**
-768 px tablet
-*/
+// 768px Screen
 @media (max-width: 768px) {
-    /**
-    Globals Mobile Changes
-    */
+    
+    // Globals Mobile Changes
     h1 {
         font-size: 4.2rem;
         line-height: 4.2rem;
@@ -55,9 +64,8 @@
         line-height: 1.6rem; 
     }
 
-    /**
-    Removing and Adding Global Padding (this will be better next time lol)
-    */
+   
+    //  Removing and Adding Global Padding (this will be better next time lol)
     .nav-container,
     #home-hero-container,
     .default-header,
@@ -75,9 +83,7 @@
     }
 
 
-    /**
-    Specific to page mobile styles
-    */
+    // Specific to page mobile styles
     .nav-container {
         nav {
             li:last-child {
@@ -115,8 +121,7 @@
         }
     }
 
-    #home-features-container {
-        // padding: 4.8rem 2.8rem; 
+    #home-features-container { 
         flex-direction: column;
 
         .feature {
@@ -173,6 +178,7 @@
     }
 }
 
+// 450px Screen
 @media (max-width: 450px) {
     a.button {
         width: 100%; 

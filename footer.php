@@ -1,3 +1,12 @@
+<?php 
+/**
+ * Footer
+ *
+ * @author: 	John Starr
+ * @author:		Hannah Moats
+ */
+?>
+
 	<div class="push"></div>
 </div> <!-- end .wrap -->
 

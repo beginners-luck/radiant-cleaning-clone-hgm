@@ -1,6 +1,13 @@
-/**
-Features Content
-*/
+//** Styles for the front page of the site
+//## Features Content
+//## Service Areas Content
+//## Testimonial Content
+//## Satisfaction Content
+//## Hiring Content
+//## Contact
+
+
+// Features Content
 .home {
     .container {
         text-align: center;
@@ -27,9 +34,8 @@ Features Content
     }
 }
 
-/**
-Service Areas Content
-*/
+
+// Service Areas Content
 #home-service-areas-container {
     text-align: center;
 
@@ -65,10 +71,9 @@ Service Areas Content
     }
 }
 
-/**
-Testimonial Content
-Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-good-practice/
-*/
+
+// Testimonial Content
+// Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-good-practice/
 #home-testimonial-container {
     position: relative;
     min-height: 48rem;
@@ -117,16 +122,12 @@ Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-
     }
 }
 
-/**
-Satisfaction Content
-*/
+// Satisfaction Content
 #home-satisfaction-container {
     text-align: center;
 }
 
-/**
-Hiring Content
-*/
+// Hiring Content
 #home-hiring-cta-container {
     border-radius: $border-radius;
     display: grid;
@@ -166,6 +167,8 @@ Hiring Content
     }
 }
 
+
+// Contact 
 #contact {
     text-align: center;
 }

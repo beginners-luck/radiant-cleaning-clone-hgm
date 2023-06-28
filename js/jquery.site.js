@@ -62,10 +62,10 @@ $(document).ready(function(){
 	});
 
 
-	// Add animation for each child element for a piece of content
+	// Add animation for each child element of a parent.
 	// animationType: the type of animation to be added
 	// dataIdStart: the starting number for the data-id
-	// parent: the class of the parent of the children to be animated
+	// parentPath: the class path of the parent of the children to be animated
 	function addAnimationToChildren(animationType, dataIdStart, parentPath) { 
 		dataId = dataIdStart; 
 		$(parentPath).children().each(function() {
@@ -75,9 +75,5 @@ $(document).ready(function(){
 		});
 	}
 	addAnimationToChildren("fadeInUp", 1, "#home-hero-container .home-hero-content-container .wp-content");
-	// .home-hero-content-container wp-content
-
-
-
 	
 });

@@ -1,6 +1,15 @@
 <?php 
 /**
- * Takes the button shortcode and returns html for the button. 
+ * Functions for shortcodes and shortcode creation. 
+ * 
+ * @author      Hannah Moats
+ */
+
+/**
+ * Generates html for a button based on shortcode specifications.
+ * 
+ * @param       Array $attributes Specifies the type of button.
+ * @return      String The html code for the button
  */
 function get_button_html($attributes) {
     $defaults = array(

@@ -2,8 +2,8 @@
 /**
  * Template for the hero on the homepage. The header tag begins
  * in the header.php file and ends in this file.
+ * 
  * @version:		1.0
- *
  * @author: 		Hannah Moats
 */
 ?>   	

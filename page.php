@@ -1,4 +1,13 @@
 <?php 
+/**
+ * page.php
+ * 
+ * Catch all for all pages.
+ *
+ * @author: 	John Starr
+ * @author:		Hannah Moats
+ */
+
 get_header(); 
 get_template_part('template-parts/default-header');
 ?>

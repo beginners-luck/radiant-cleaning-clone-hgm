@@ -2,8 +2,8 @@
 /**
  * A basic template for any page. Only contains a blue background 
  * and page title.
+ * 
  * @version:		1.0
- *
  * @author: 		Hannah Moats
 */
 ?>

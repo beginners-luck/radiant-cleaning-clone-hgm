@@ -260,6 +260,8 @@ img.aligncenter {
 }
 .wp-content a.button {
   margin-bottom: 4.8rem;
+}
+.wp-content a.button:not(:last-of-type) {
   margin-right: 1.2rem;
 }
 .wp-content > :last-child {
@@ -612,23 +614,10 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message 
   padding-left: 0;
 }
 
-/*!
- *         ,/
- *       ,'/
- *     ,' /
- *   ,'  /_____,
- * .'____    ,'
- *      /  ,'
- *     / ,'
- *    /,'
- *   /'
- *
+/**
  * Selectric ϟ v1.13.0 (Aug 22 2017) - http://lcdsantos.github.io/jQuery-Selectric/
- *
  * Copyright (c) 2017 Leonardo Santos; MIT License
- * 
- * Custom styles added.
- * Selectric Styles: https://selectric.js.org/demo.html
+ * Selectric Styles Tips: https://selectric.js.org/demo.html
  */
 .selectric-wrapper {
   position: relative;
@@ -931,9 +920,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message 
   text-align: left;
 }
 
-/**
-Features Content
-*/
 .home .container {
   text-align: center;
 }
@@ -957,9 +943,6 @@ Features Content
   padding-left: 3.4rem;
 }
 
-/**
-Service Areas Content
-*/
 #home-service-areas-container {
   text-align: center;
 }
@@ -994,10 +977,6 @@ Service Areas Content
   line-height: 3.4rem;
 }
 
-/**
-Testimonial Content
-Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-good-practice/
-*/
 #home-testimonial-container {
   position: relative;
   min-height: 48rem;
@@ -1039,16 +1018,10 @@ Swiperjs Styling Tips: https://oxygen4fun.supadezign.com/tips/swiperjs-tips-and-
   height: 100%;
 }
 
-/**
-Satisfaction Content
-*/
 #home-satisfaction-container {
   text-align: center;
 }
 
-/**
-Hiring Content
-*/
 #home-hiring-cta-container {
   border-radius: 1.2rem;
   display: grid;
@@ -1160,13 +1133,7 @@ footer .footer-bottom-row .menu#menu-footer-menu {
     flex-direction: column;
   }
 }
-/**
-768 px tablet
-*/
 @media (max-width: 768px) {
-  /**
-  Globals Mobile Changes
-  */
   h1 {
     font-size: 4.2rem;
     line-height: 4.2rem;
@@ -1183,9 +1150,6 @@ footer .footer-bottom-row .menu#menu-footer-menu {
     font-size: 1.6rem;
     line-height: 1.6rem;
   }
-  /**
-  Removing and Adding Global Padding (this will be better next time lol)
-  */
   .nav-container,
   #home-hero-container,
   .default-header,
@@ -1201,9 +1165,6 @@ footer .footer-bottom-row .menu#menu-footer-menu {
     padding-left: 2.8rem;
     padding-right: 2.8rem;
   }
-  /**
-  Specific to page mobile styles
-  */
   .nav-container nav li:last-child {
     display: none;
   }

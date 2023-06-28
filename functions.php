@@ -1,4 +1,14 @@
 <?php
+/**
+ * Functions
+ * 
+ * Setup for attaching scripts, styles, adding menus, login logo, 
+ * options page, allow svgs, remove links from images. Also includes
+ * inlcude files (ie. shortcodes.php)
+ *
+ * @author: 	John Starr
+ * @author:		Hannah Moats
+ */
 
 //Disable the Wordpress Admin Bar.
 show_admin_bar(false);
@@ -136,7 +146,6 @@ function custom_login_logo_url() {
     return get_bloginfo('url');
 }
 add_filter( 'login_headerurl', 'custom_login_logo_url' );
-
 
 
 // pull in shortcodes
